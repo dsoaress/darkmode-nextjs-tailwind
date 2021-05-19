@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-body: #111827;
+  --color-background: #f9fafb;
+}
+
+[data-theme="dark"] {
+  --color-body: #f9fafb;
+  --color-background: #111827;
+}
+
 @layer base {
   body {
-    @apply bg-gray-50
-      dark:bg-gray-900
-      text-gray-900
-      dark:text-gray-50
-      transition-colors;
+    @apply bg-background text-body transition-colors;
   }
 }
